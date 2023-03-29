@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Chart</title>
+    <script>
+            ${ jquery }
+            ${ d3.min }
+            ${ zc.min }
+            ${ zcpageLiveChart }
+    </script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .zcMobileUI .canvas-property {
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='zpAlignPos zcMobileUI' style''>
+    </div>
+    <div class='zc-pb-elem-hdr-container'>
+        <div class='zc-pb-elem-title-container' style='display:none'>
+            <span class='zc-pb-elem-title-val' style'' selectable='title' fsize='4'> Title </span>
+        </div>
+    </div>
+    <script>
+        var holder = $(".zpAlignPos");
+        holder.css("height", "100%");
+        var width = holder.css("width");
+        holder.css("width", width);
+        var config = JSON.stringify(${ JSON })
+        ZCPageChart.loadZCChart(holder[0], config);
+    </script>
+</body>
+
+</html>
